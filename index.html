@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- You may want to add this link for the Font Awesome icons (for password toggle) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+
+        <form id="loginform">
+            <div class="input-group">
+                <label for="Username">Username (Email)</label>
+                <input type="text" name="Username" id="Username" required>
+            </div>
+       
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required>
+                <span id="togglepassword" class="toggle-password">
+                    <i class="fas fa-eye"></i>
+                </span>
+            </div>
+
+            <div class="input-group captcha-group">
+                <label for="captcha">Captcha</label>
+                <input type="text" id="captchaInput" placeholder="Enter The Captcha" required>
+                <div id="captchaCode">HMW92W</div>
+                <button type="button" id="refreshCaptcha">Refresh Captcha</button>
+            </div>
+
+            <button type="submit">Login</button>
+
+            <p id="errorMessage" class="error-message"></p>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
